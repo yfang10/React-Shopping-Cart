@@ -25,7 +25,9 @@ class App extends React.Component{
               <main>
                 <div className = "content">
                   <div className = "main">
-                    <Filter count = {this.state.products.length}></Filter>
+                    <Filter count = {this.state.products.length}>
+                      size = {this.state.size}
+                    </Filter>
 
                  <Products products = {this.state.products}></Products>
                   </div>
