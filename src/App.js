@@ -2,7 +2,7 @@
 import React from 'react';
 import data from './data.json';
 import { render } from '@testing-library/react';
-import Products from './component/Products';
+import Products from './components/Products';
 
 
 
