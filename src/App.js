@@ -1,6 +1,8 @@
+//feature1
 import React from 'react';
 import data from './data.json';
 import { render } from '@testing-library/react';
+import Products from './component/Products';
 
 
 
@@ -22,7 +24,7 @@ class App extends React.Component{
               <main>
                 <div className = "content">
                   <div className = "main">
-                  <Products products = {this.state.products}></Products>
+                 <Products products = {this.state.products}></Products>
                   </div>
                   <div className = "sidebar">Cart Items</div>
                 </div>        
