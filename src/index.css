@@ -129,7 +129,8 @@ footer{
   background-color: #f0f0f0;
   cursor: pointer;
 }
-
+.button: 
+}
 .button.primary{
   background-color: #ffc000;
 }
