@@ -88,10 +88,9 @@ footer{
 }
 
 .product li{
-  flex: 1 1 29rem;
+  flex: 0 1 29rem;
   height: 47rem;
   padding: 1rem;
-  margin: 1rem;
 }
 
 .product{
@@ -135,5 +134,5 @@ footer{
 }
 
 .button.primary{
-  background-color: #ffc000;
+  background-color: #f0c040;
 }
