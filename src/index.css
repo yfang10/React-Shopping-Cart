@@ -14,7 +14,7 @@ body,
 
 }
 
-body, input, select, textarea{
+body, input, select, button, textarea{
   font-size: 1.6rem;
   font-family: Montserrat, Helvetica, Arial, sans-serif
 }
