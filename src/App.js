@@ -16,6 +16,16 @@ class App extends React.Component{
       sort: "",
     };
   }
+
+  sortProducts(event){
+    console.log(event.target.value)
+
+  }
+
+  filterProducts(sorts){
+    console.log(event.target.value);
+
+  }
   render(){
   return (
     <div className = "grid-container">
