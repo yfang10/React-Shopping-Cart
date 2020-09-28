@@ -14,7 +14,7 @@ class Products extends Component{
             product: null,
         };
     }
-}
+
 
 componentDidMount(){
     this.props.fetchProducts();
