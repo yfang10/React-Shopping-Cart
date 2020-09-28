@@ -1,4 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import {connect} from "react-redux";
+import {filterProducts, sortProducts} from "../actions/pruductActions";
 
 export default class Filter extends Component {
     render() {
