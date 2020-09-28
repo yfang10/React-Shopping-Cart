@@ -56,5 +56,4 @@ closeModal = () =>{
                 </ul>
             </div>
         )
-    }
-}
+                    }
