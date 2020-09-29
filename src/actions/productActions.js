@@ -19,6 +19,14 @@ export const filterProducts = (products, size) => (dispatch) =>{
             size: size,
             items:
             size === ""
-        }
-    })
+            ? products
+            : products.filter((x) => x.availableSizes.indexOf(size) >= 0),
+
+        },
+    }),
+};
+
+export const sortProducts = (filteredProducts, sort) => (dispatch) =>{
+    const sortedProducts = filteredProducts.slice();
+    
 }
