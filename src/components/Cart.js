@@ -44,7 +44,7 @@ class Cart extends Component{
             const{cartItems, order} = this.props;
             return(
                 <div>
-                    {cartItems.length == 0?(
+                    {cartItems.length === 0?(
                         <div className = "cart cart-header">Cart is empty</div>
                     ):(
                         <div className = "cart cart-header">
@@ -54,7 +54,7 @@ class Cart extends Component{
             )}
 
             {order && (
-                Modal isOpen = {true} onRequestClose = {this.closeModal};
+                <Modal isOpen = {true} onRequestClose = {this.closeModal}>
                 <Zoom>
                     <button className = "close-modal" onClick = {this.closeModal}>x
                     
@@ -87,7 +87,26 @@ class Cart extends Component{
                                     <div>Total:</div>
                                     <div>{formatCurrency(order.total)}</div>
                                 </li>
+
+                                <li>
+                                    <div>Cart Items:</div>
+                                    <div>{order.cartItems.map((x) => (
+                                        <div>
+                                            {x.count}{"x"}{x.title}
+                                        </div>
+                                    ))}
+
+                                    </div>
+                                </li>
                             </ul>
                         </div>
                 </Zoom>
+                </Modal>
             )}
+            <div>
+
+            </div>
+            <div>
+
+            </div>
+            </div>
