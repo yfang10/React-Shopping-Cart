@@ -53,7 +53,7 @@ closeModal = () =>{
                                     <div>
                                         {formatCurrency(product.price)}
                                     </div>
-                                    <button className = "button">Add to Cart</button>
+                                    <button onClick = {(className = "button">Add to Cart</button>
                                 </div>
                             </div>
                         </li>
