@@ -171,15 +171,39 @@ class Cart extends Component{
 
                                                 <li>
                                                     <label>Address</label>
+                                                    <input
+                                                    name = "name"
+                                                    type = "text"
+                                                    required
+                                                    onChange = {this.handleInput}></input>
+                                                </li>
+
+                                                <li>
+                                                    <button className = "button primary" type = "submit">
+                                                        Checkout
+                                                    </button>
                                                 </li>
                                             </ul>
                                         </form>
 
-                                    </div>
-                                    
+                                    </div>             
                                 </Fade>
                             )}
+                            </div>
                 )}
 
             </div>
             </div>
+            );
+                            }
+                        }
+
+                        export default connect(
+                            (state) => ({
+                                order: state.order.order,
+                                cartItems: state.cart.cartItems,
+                            }), 
+                            {removeFromCart, createOrder, clearOrder}
+
+                            
+                            )(Cart);
