@@ -53,11 +53,35 @@ closeModal = () =>{
                                     <div>
                                         {formatCurrency(product.price)}
                                     </div>
-                                    <button onClick = {(className = "button">Add to Cart</button>
+                                    <button onClick = {() => this.props.addToCart(product)}
+                                    className = "button primary">Add to Cart</button>
                                 </div>
                             </div>
                         </li>
                     ))}
                 </ul>
+                    )}
+                    </Fade>
+                    {product && (
+                        <Modal isOpen = {true} onRequestClose = {this.closeModal}>
+                        <Zoom>
+                        <button className = "close-modal" onClick = {this.closeModal}>
+                        x
+                        </button>
+                        <div className = "product-details">
+                        <img src = {product.image} alt = {product.title}></img>
+                        <div className = "product-details-description">
+                        <p>
+                        <strong>{product.title}</strong><
+                            <p>{product.description}</p> 
+                            <p>Available Sizes: {" "}
+                            {product.availableSizes.map((x) =>(
+                                <span>
+                                    {" "}
+                                </span>
+                                </p></div>
+                        </div>
+                        </Zoom></Modal>kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                    )}
             </div>
         )
