@@ -78,8 +78,19 @@ closeModal = () =>{
                             {product.availableSizes.map((x) =>(
                                 <span>
                                     {" "}
+                                    <button className = "button">{x}</button>
                                 </span>
-                                </p></div>
+                            ))}
+                                </p>
+                                <div className = "product-price">
+                                    </div>
+
+                                    <div>{formatCurrency(product.price)}</div>
+                                    <button className = "button primary" onClick = {() => {
+                                        this.props.addToCart(product);
+                                        this.closeModal();
+                                    }}>Add to Cart</button>
+                                </div>
                         </div>
                         </Zoom></Modal>
                     )}
