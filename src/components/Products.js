@@ -81,7 +81,7 @@ closeModal = () =>{
                                 </span>
                                 </p></div>
                         </div>
-                        </Zoom></Modal>kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk
+                        </Zoom></Modal>
                     )}
             </div>
         )
