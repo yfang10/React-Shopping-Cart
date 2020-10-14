@@ -92,7 +92,14 @@ closeModal = () =>{
                                     }}>Add to Cart</button>
                                 </div>
                         </div>
-                        </Zoom></Modal>
+                        </div>
+                        </Zoom>
+                        </Modal>
                     )}
             </div>
+        );
+        }
+        }
+        export default connect(
+            (state) => ({})
         )
