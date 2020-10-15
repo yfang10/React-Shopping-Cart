@@ -1,10 +1,10 @@
 //feature1
-import React from 'react';
-import data from './data.json';
-import { render } from '@testing-library/react';
-import Products from './components/Products';
-import Filter from './components/Filter';
-
+import React from "react";
+import store from "./store";
+import {Provider} from "react-redux";
+import {BrowserRouter, Route, Link} from "react-router-dom";
+import HomeScreen from "./screens/HomeScreen";
+import AdminScreen from "./screens/AdminScreen";
 
 
 class App extends React.Component{
@@ -28,6 +28,7 @@ class App extends React.Component{
      </Provider>
    );
  }
+
 }
 
 export default App;
