@@ -5,7 +5,7 @@ import {connect} from "react-redux";
 import Modal from "react-modal";
 import Zoom from "react-reveal/Zoom";
 import {removeFromCart} from "../actions/cartActions";
-import {createOrders, clearOrder} from "../actions/orderActions";
+import {createOrder, clearOrder} from "../actions/orderActions";
 
 class Cart extends Component{
     constructor(props){
