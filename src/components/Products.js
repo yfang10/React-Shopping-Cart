@@ -40,7 +40,7 @@ closeModal = () =>{
                     ) : (
 
                 <ul className = "products">
-                    {this.props.products.map((product =>(
+                    {this.props.products.map((product) =>(
                         <li key = {product._id}>
                             <div className = "product">
                                 <a href = {"#" + product._id} onClick = {() => this.openModal(product)}> 
@@ -72,7 +72,8 @@ closeModal = () =>{
                         <img src = {product.image} alt = {product.title}></img>
                         <div className = "product-details-description">
                         <p>
-                        <strong>{product.title}</strong><
+                        <strong>{product.title}</strong>
+                        </p>
                             <p>{product.description}</p> 
                             <p>Available Sizes: {" "}
                             {product.availableSizes.map((x) =>(
@@ -82,17 +83,18 @@ closeModal = () =>{
                                 </span>
                             ))}
                                 </p>
-                                <div className = "product-price">
-                                    </div>
 
+                                <div className = "product-price">
                                     <div>{formatCurrency(product.price)}</div>
                                     <button className = "button primary" onClick = {() => {
                                         this.props.addToCart(product);
                                         this.closeModal();
-                                    }}>Add to Cart</button>
+                                    }}>
+                                        Add to Cart
+                                        </button>
                                 </div>
-                        </div>
-                        </div>
+                                </div>
+                                </div>
                         </Zoom>
                         </Modal>
                     )}
@@ -101,5 +103,9 @@ closeModal = () =>{
         }
         }
         export default connect(
-            (state) => ({})
-        )
+            (state) => ({products: state.products.filteredItems}),
+            {
+                fetchProducts, 
+                addToCart,
+            }
+        )(Products);
