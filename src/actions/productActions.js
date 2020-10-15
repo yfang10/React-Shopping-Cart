@@ -23,7 +23,7 @@ export const filterProducts = (products, size) => (dispatch) =>{
             : products.filter((x) => x.availableSizes.indexOf(size) >= 0),
 
         },
-    }),
+    });
 };
 
 export const sortProducts = (filteredProducts, sort) => (dispatch) =>{
@@ -34,6 +34,9 @@ export const sortProducts = (filteredProducts, sort) => (dispatch) =>{
         sortedProducts.sort((a, b) => 
         sort === "lowest"
         ? a.price > b.price
+        ? 1
+        : -1
+        : a.price > b.price
         ? -1
         : 1
         );
@@ -48,4 +51,3 @@ dispatch({
 });
 };
 
-}
