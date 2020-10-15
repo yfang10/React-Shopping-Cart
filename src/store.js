@@ -13,6 +13,6 @@ const store = createStore(
         order: orderReducer,
     }),
     initialState,
-    composeEnhancer(aplyMiddleware(thunk))
+    composeEnhancer(applyMiddleware(thunk))
 );
 export default store;
